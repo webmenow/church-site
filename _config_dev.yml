@@ -1,3 +1,4 @@
+
 #
 # This config-file is only needed for development. Instead of changing the url
 # everytime you work locally on the project, you start both config-files, overwriting
@@ -5,22 +6,111 @@
 #
 # Start development with › $ jekyll serve --config _config.yml,_config_dev.yml
 
-url: 		'http://localhost:4000'
-baseurl: 	''
-urlimg: 	'http://localhost:4000/images/'
+title: "СПАЦ"
+description: ""
+url: "https://church-site-3ln.pages.dev"
+baseurl: ""
+timezone: "Europe/Moscow"
+lang: "ru"
 
-# See › https://github.com/jekyll/jekyll-gist#disabling-noscript-support
-gist:
-  noscript: false
+# Убрать "ряд" из мобильного меню
+# (в теме это управляется через _data/navigation.yml и шаблон)
 
-sass:
-  # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
-  style: :expanded
-  line_numbers: true
-  # trace_selectors: true
-  # debug_info: true
-  # FUTURE https://github.com/jekyll/jekyll-sass-converter/issues/12
-  # sourcemap: true # Produces an error
+permalink: /news/:year/:slug/
 
-# Disable when not in production
-google_analytics_tracking_id: false
+paginate: 10
+paginate_path: "/news/page:num/"
+
+collections:
+  saints:
+    output: true
+    permalink: /saints/:slug/
+  parishes:
+    output: true
+    permalink: /parishes/:slug/
+  documents:
+    output: true
+    permalink: /documents/:slug/
+  canons:
+    output: true
+    permalink: /canons/:slug/
+  library:
+    output: true
+    permalink: /library/:slug/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      sidebar: false
+  - scope:
+      path: "_saints"
+      type: saints
+    values:
+      layout: page
+      sidebar: lik
+  - scope:
+      path: "_parishes"
+      type: parishes
+    values:
+      layout: page
+      sidebar: false
+  - scope:
+      path: "_library"
+      type: library
+    values:
+      layout: page
+      sidebar: false
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+```
+
+---
+
+### Карта файлов и папок
+```
+_config.yml
+
+_data/
+  navigation.yml       # главное меню
+  sidebars.yml         # наборы ссылок для сайдбаров
+
+_posts/                # лента новостей (НАЧАЛО)
+  2026-03-11-title.md  # front matter: pinned: true для закреплённых
+
+_saints/               # Собор святых СПАЦ
+_parishes/             # Общины и духовенство
+_documents/            # Документы (Деяния, Каноны)
+_library/              # Библиотека
+
+pages/
+  index.md             # НАЧАЛО (лента + до 3 закреплённых)
+  bogosluzhenie.md     # раздел (сайдбар: bogosluzhenie)
+  chtenie-dnya.md      # Чтение дня (без сайдбара)
+  chest-i-pamyat.md    # Честь и память (без сайдбара)
+  lik.md               # Лик церковный (сайдбар: lik)
+  saints.md            # Собор святых СПАЦ
+  parishes.md          # Общины и духовенство
+  ustroenie.md         # Устроение (сайдбар: ustroenie)
+  osnovanie.md         # Основание
+  deyaniya.md          # Деяния
+  kanony.md            # Каноны
+  biblioteka.md        # Библиотека (сайдбар: biblioteka)
+  lib-new.md           # Новое
+  lib-archive.md       # Архив
+  gallery.md           # Галерея (без сайдбара)
+  gallery-photo.md     # Фото
+  gallery-video.md     # Видео
+  contact-address.md   # Адрес (без сайдбара)
+  contact-form.md      # Отклик — форма + Turnstile
+
+assets/
+  images/
+  js/
+    sidebar-accordion.js   # ~10 строк для мобильного accordion
