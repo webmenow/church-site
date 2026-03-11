@@ -1,0 +1,25 @@
+bogosluzhenie:
+  - title: Чтение дня
+    url: /chtenie-dnya/
+  - title: Честь и память
+    url: /chest-i-pamyat/
+
+lik:
+  - title: Собор святых СПАЦ
+    url: /saints/
+  - title: Общины и духовенство
+    url: /parishes/
+
+ustroenie:
+  - title: Основание
+    url: /osnovanie/
+  - title: Деяния
+    url: /deyaniya/
+  - title: Каноны
+    url: /kanony/
+
+biblioteka:
+  - title: Новое
+    url: /lib-new/
+  - title: Архив
+    url: /lib-archive/
