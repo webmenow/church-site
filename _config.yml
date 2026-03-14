@@ -8,10 +8,12 @@
 #                                                 /____/
 #
 # Title of your website
-title: 'СПАЦ'
+title: "СПАЦ"
 
-# The slogan describes your website and is used on homepage in <title> and other important places
-slogan: 'A Flexible Theme for Jekyll'
+timezone: "Europe/Paris"
+lang: "ru"
+
+slogan: 'Соборная Православная Апостольская Церковь'
 
 # The description is used on homepage and in the footer to quickly describe your website. Use a maximum of 150 characters for SEO-purposes.
 description: '»Соборная Православная Апостольская Церковь'
@@ -38,7 +40,7 @@ improve_content: https://github.com/Phlow/feeling-responsive/edit/gh-pages
 # Example: <img src="{{ site.urlimg }}{{ post.image.title }}" />
 # Markdown-Example for posts ![Image Text]({{ site.urlimg }}image.jpg)
 #
-urlimg: 'https://phlow.github.io/feeling-responsive/images/'
+urlimg: '/images/'
 
 
 # Logo size is 600x80 pixels
@@ -49,6 +51,7 @@ plugins:
     - jekyll-asciidoc
     - jekyll-gist
     - jekyll-paginate
+    - jekyll-seo-tag
 
 
 #       ____              _             __  _
@@ -80,7 +83,7 @@ exclude:
 
 
 # The language setting is used in /includes/header.html for html-settings
-language: 'en'
+language: 'ru'
 
 
 # Used › default.html front-matter and compress.html
@@ -101,16 +104,40 @@ compress_html:
 #    / /_/ /  __/ __/ /_/ / /_/ / / /_
 #   /_____/\___/_/  \__,_/\__,_/_/\__/
 #
+
+collections:
+  saints:
+    output: true
+    permalink: /saints/:slug/
+  parishes:
+    output: true
+    permalink: /parishes/:slug/
+  documents:
+    output: true
+    permalink: /documents/:slug/
+  canons:
+    output: true
+    permalink: /canons/:slug/
+  library:
+    output: true
+    permalink: /library/:slug/
+
 # Default Settings
 
 defaults:
   -
     scope:
-      path: '' 				# an empty string here means all files in the project
+      path: ''
+    values:
+      layout: page-fullwidth
+      header:
+        image_fullwidth: "header1.jpg"
+  -
+    scope:
+      path: ''
       type: 'pages'
     values:
-      show_meta: false 	# Hide metadata for all pages
-      # sidebar:    		# Possible values › left, right › by default there will be no sidebar
+      show_meta: false
       comments: false
       author: phlow     # Default author for pages
   -
@@ -118,11 +145,28 @@ defaults:
       path: ''
       type: 'posts'
     values:
-      show_meta: true   # Show metadata for all posts
-      # sidebar:        # Possible values › left, right › by default there will be no sidebar
+      sidebar: false
+      show_meta: true
       comments: false
-      author: phlow     # Default author for posts
-
+      author: СПАЦ    # Default author for posts
+  -
+    scope:
+      path: ''
+      type: 'saints'
+    values:
+      sidebar: lik
+  -
+    scope:
+      path: ''
+      type: 'parishes'
+    values:
+      sidebar: false
+  -
+    scope:
+      path: ''
+      type: 'library'
+    values:
+      sidebar: false
 
 
 #       _   __            _             __  _
@@ -192,8 +236,8 @@ og_type                              : 'website'
 #
 
 socialmedia:
-    twitter   : phlow
-    facebook  : phlow.media
+    Vk0IOJ2jwG_qEoG7fuEXYqv0m2rLa8P778Fi_GrsgEQ
+    
 
 
 #        ____  _

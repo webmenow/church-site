@@ -36,8 +36,8 @@ body.video p,
 body.video a,
 body.video blockquote:before,
 body.video blockquote:after,
-body.video cite a, { color: #fff; }
-body.video cite a:visited, { color: #fff; }
+body.video cite a { color: #fff; }
+body.video cite a:visited { color: #fff; }
 body.video cite { color: #fff; }
 
 
@@ -85,15 +85,43 @@ body.video cite { color: #fff; }
 #masthead-no-image-header {
     height: 175px;
 }
-#masthead-no-image-header #logo img {
+#masthead-no-image-header #logo img,
+#masthead #logo .site-title-banner {
     margin-top: 60px;
+}
+
+#logo .site-title-banner {
+    color: #524d41;
+    font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.1;
+    text-align: left;
+    white-space: nowrap;
+    text-shadow: none;
+    display: inline-block;
+    padding-bottom: 30px;
+    position: absolute;
+    bottom: 50px;
+    margin-top: 0 !important;
+}
+
+#masthead .row,
+#masthead .columns {
+    height: 100%;
+}
+
+@media (min-width: 1920px) {
+    #logo .site-title-banner {
+        font-size: 2.5vw;
+    }
 }
 
 /* Masthead › small-only
 ------------------------------------------------------------------- */
 
 @media #{$small-only} {
-    #logo img {
+    #logo img, #logo .site-title-banner {
         display: none;
     }
     #masthead {
@@ -120,11 +148,11 @@ body.video cite { color: #fff; }
 ------------------------------------------------------------------- */
 
 @media #{$medium-only} {
-    #logo img {
-        margin-top: 60px;
+    #logo img, #logo .site-title-banner {
+        margin-top: 150px;
     }
     #masthead {
-        height: 280px;
+        height: 370px;
     }
     #masthead-with-pattern {
         padding: 20px 0;
@@ -143,11 +171,11 @@ body.video cite { color: #fff; }
 ------------------------------------------------------------------- */
 
 @media #{$large-only} {
-    #logo img {
-        margin-top: 80px;
+    #logo img, #logo .site-title-banner {
+        margin-top: 280px;
     }
     #masthead {
-        height: 310px;
+        height: 510px;
     }
     #masthead-with-pattern {
         padding: 30px 0;
@@ -166,11 +194,11 @@ body.video cite { color: #fff; }
 ------------------------------------------------------------------- */
 
 @media #{$xlarge-up} {
-    #logo img {
-        margin-top: 110px;
+    #logo img, #logo .site-title-banner {
+        margin-top: 320px;
     }
     #masthead {
-        height: 380px;
+        height: 590px;
     }
     #masthead-with-pattern {
         padding: 45px 0;

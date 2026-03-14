@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page-fullwidth
 #
 # Content
 #
@@ -15,8 +15,7 @@ tags:
 #
 header: no
 header:
-    image_fullwidth:
-    image:
+    image_fullwidth: \"header1.jpg\"
     pattern:
     color:
     background-color: "#fabb00"   # You must use ""
