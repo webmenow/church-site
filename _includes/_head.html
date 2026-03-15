@@ -79,6 +79,13 @@
 	<style type="text/css">{{ page.style }}</style>
 	{% endunless %}
 
+    <style>
+        * {
+            transition: none !important;
+            animation: none !important;
+        }
+    </style>
+
 	{% if site.google_analytics_tracking_id %}
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics_tracking_id }}"></script>

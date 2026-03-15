@@ -1,4 +1,4 @@
-- title: "Начало"
+- title: "СПАЦ"
   url: "/"
   side: left
 
@@ -7,57 +7,48 @@
   side: right
   dropdown:
   - title: "Чтение дня"
-    url: "/bogosluzhenie/chtenie-dnya/"
+    url: "/pages/chtenie-dnya/"
   - title: "Честь и память"
-    url: "/bogosluzhenie/chest-i-pamyat/"
-
-- title: "Устроение"
-  url: "#"
-  side: right
-  dropdown:
-  - title: "Деяния"
-    url: "/ustroenie/deyaniya/"
-  - title: "Каноны"
-    url: "/ustroenie/kanony/"
-  - title: "Основание"
-    url: "/ustroenie/osnovanie/"
+    url: "/pages/chest-i-pamyat/"
 
 - title: "Лик церковный"
   url: "#"
   side: right
   dropdown:
   - title: "Собор святых СПАЦ"
-    url: "/lik/sobor-svyatyh-spac/"
+    url: "/saints/"
   - title: "Общины и духовенство"
-    url: "/lik/obshiny-i-duhovenstvo/"
+    url: "/parishes/"
+
+- title: "Устроение"
+  url: "#"
+  side: right
+  dropdown:
+  - title: "Деяния"
+    url: "/pages/deyaniya/"
 
 - title: "Библиотека"
   url: "#"
   side: right
   dropdown:
   - title: "Новое"
-    url: "/biblioteka/novoe/"
+    url: "/new/"
   - title: "Архив"
-    url: "/biblioteka/arhiv/"
+    url: "/archive/"
 
 - title: "Галерея"
   url: "#"
   side: right
   dropdown:
-  - title: "Фото"
-    url: "/galereya/foto/"
   - title: "Видео"
-    url: "/galereya/video/"
+    url: "/pages/video/"
+  - title: "Фото"
+    url: "/pages/foto/"
+
+- title: "Контакт"
+  url: "/contact/"
+  side: right
 
 - title: "Поиск"
   url: "/search/"
   side: right
-
-- title: "Связь"
-  url: "#"
-  side: right
-  dropdown:
-  - title: "Адрес"
-    url: "/svyaz/adres/"
-  - title: "Отклик"
-    url: "/svyaz/otklik/"

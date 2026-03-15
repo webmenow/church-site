@@ -112,15 +112,13 @@ collections:
   parishes:
     output: true
     permalink: /parishes/:slug/
+  new:
+    output: true
+  archive:
+    output: true
   documents:
     output: true
     permalink: /documents/:slug/
-  canons:
-    output: true
-    permalink: /canons/:slug/
-  library:
-    output: true
-    permalink: /library/:slug/
 
 # Default Settings
 
@@ -129,9 +127,10 @@ defaults:
     scope:
       path: ''
     values:
-      layout: page-fullwidth
+      layout: page
+      breadcrumb: true
       header:
-        image_fullwidth: "header1.jpg"
+        title: "Соборная<br>Православная<br>Апостольская<br>Церковь"
   -
     scope:
       path: ''
